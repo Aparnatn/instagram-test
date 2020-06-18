@@ -1,0 +1,22 @@
+<div class="card home-card">
+              
+              <h5>varun.adithya<i class="material-icons" style=float:right;>more_vert</i></h5>
+    <div class="card-image">
+        <img src="{{ post.medium_thumbnail }}" />
+
+    </div>
+    <div class="card-content">
+        <i class="material-icons" style=font-size:24px;>favorite_border</i>
+        <i class='far fa-comment' style=font-size:24px;></i>
+        <i class="fa fa-bookmark-o" style=font-size:24px;float:right;></i>
+        <div ng-app="app" ng-controller="TestController">
+            <div show-more>
+                All sorts of <strong>stuff</strong> can go in here.
+                <li *ngIf="!showFull">{{ post.title | slice:0:50 }}</li>
+                <li *ngIf="showFull">{{ post.title }} sdsdsd</li>
+                <button (click)="showFull = true">more</button>
+            </div>
+
+            
+        </div>
+    </div>
